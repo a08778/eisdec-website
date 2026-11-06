@@ -1,6 +1,8 @@
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Hero from '../components/Hero/Hero';
+import About from '../components/About/About';
+import Expertise from '../components/Expertise/Expertise';
 import styles from './App.module.css';
 
 export default function App() {
@@ -12,6 +14,8 @@ export default function App() {
       <Header />
       <main id="main-content" className={styles.main} tabIndex={-1}>
         <Hero />
+        <About />
+        <Expertise />
       </main>
       <Footer />
     </div>

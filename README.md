@@ -4,10 +4,10 @@ Official corporate website of EISDEC, an emerging technology company.
 
 ## Development status
 
-Phase 2.1 adds the approved Hero heading and description, replacing the development
-placeholder. The Header logo links to the homepage. About, Expertise, Projects,
-and Contact remain deferred; their navigation links will be enabled when those
-sections exist. The brand foundation, minimal Footer, and full-height shell remain.
+Phase 2.2 adds About and Expertise below the approved Hero. The Header remains
+logo-only with a working homepage link. Full navigation, Projects, Contact, and
+Privacy Notice remain deferred. The brand foundation, minimal Footer, skip link,
+and full-height shell remain unchanged.
 
 ## Technology stack
 
@@ -54,6 +54,8 @@ src/
   components/
     Header/             Responsive logo header
     Hero/               Approved heading and description with fluid typography
+    About/              Approved purpose statement
+    Expertise/          Three proposed focus areas in a fluid grid
     Footer/             Minimal company name and dynamic year
   config/site.ts        Shared site details; unknown destinations remain null
   styles/tokens.css     Semantic and provisional UI tokens
@@ -83,7 +85,7 @@ npm run build
 The build is compatible with Cloudflare Pages static hosting. For a future
 deployment, use the repository root, build command `npm run build`, output
 directory `dist`, and the documented Node.js version. No server runtime, backend,
-or database is required. No deployment or DNS configuration is part of Phase 2.1.
+or database is required. No deployment or DNS configuration is part of Phase 2.2.
 
 ## Brand integration
 
