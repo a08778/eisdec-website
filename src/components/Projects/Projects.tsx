@@ -8,6 +8,7 @@ export default function Projects() {
       className={styles.projects}
       aria-labelledby="projects-heading"
     >
+      <p className="sectionLabel">03 / PROJECTS</p>
       <h2 id="projects-heading" className={styles.heading}>
         Projects &amp; Research
       </h2>
@@ -21,19 +22,32 @@ export default function Projects() {
 
           return (
             <li key={project.id} className={styles.card}>
-              <h3 className={styles.title}>{project.name}</h3>
-              <p className={styles.status}>{project.status}</p>
-              <p className={styles.description}>{project.description}</p>
-              {url && (
-                <a
-                  className={styles.link}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit {project.name} (opens in a new tab)
-                </a>
+              {project.logo && (
+                <div className={styles.logoPanel}>
+                  <img
+                    className={styles.logo}
+                    src={project.logo}
+                    alt=""
+                    width="560"
+                    height="560"
+                  />
+                </div>
               )}
+              <div className={styles.content}>
+                <h3 className={styles.title}>{project.name}</h3>
+                <p className={styles.status}>{project.status}</p>
+                <p className={styles.description}>{project.description}</p>
+                {url && (
+                  <a
+                    className={styles.link}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit {project.name} (opens in a new tab)
+                  </a>
+                )}
+              </div>
             </li>
           );
         })}

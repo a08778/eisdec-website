@@ -7,6 +7,7 @@ export default function About() {
       className={styles.about}
       aria-labelledby="about-heading"
     >
+      <p className="sectionLabel">01 / ABOUT</p>
       <h2 id="about-heading" className={styles.heading}>
         Technology with purpose.
       </h2>

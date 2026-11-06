@@ -24,16 +24,28 @@
 }
 
 .item {
+  --card-accent: var(--accent-blue);
   min-width: 0;
   padding: var(--space-large);
-  background: var(--background-secondary);
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--card-accent) 5%, transparent),
+      transparent 60%
+    ),
+    var(--background-secondary);
+  border: var(--border-width) solid
+    color-mix(in srgb, var(--card-accent) 23%, var(--background-secondary));
+  transition:
+    border-color var(--transition-fast) ease,
+    background-color var(--transition-fast) ease;
   border-radius: var(--radius-medium);
 }
 
 .itemHeading {
   margin: 0;
-  color: var(--accent-lavender);
-  font-size: var(--font-size-body);
+  color: var(--text-primary);
+  font-size: var(--font-size-card-heading);
   font-weight: var(--weight-medium);
   line-height: var(--line-height-heading);
 }
@@ -44,4 +56,34 @@
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
   text-wrap: pretty;
+}
+
+.expertise {
+  background: radial-gradient(
+    ellipse at 70% 60%,
+    color-mix(in srgb, var(--accent-lavender) 9%, transparent),
+    transparent 70%
+  );
+}
+
+.icon {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: var(--space-large);
+  color: var(--card-accent);
+}
+.item:nth-child(2) {
+  --card-accent: var(--accent-lavender);
+}
+.item:nth-child(3) {
+  --card-accent: var(--accent-pink);
+}
+.item:hover {
+  border-color: color-mix(
+    in srgb,
+    var(--card-accent) 45%,
+    var(--background-secondary)
+  );
+  background-color: var(--background-surface);
 }

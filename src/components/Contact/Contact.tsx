@@ -11,6 +11,7 @@ export default function Contact() {
       className={styles.contact}
       aria-labelledby="contact-heading"
     >
+      <p className="sectionLabel">04 / CONTACT</p>
       <h2 id="contact-heading" className={styles.heading}>
         Get in touch.
       </h2>

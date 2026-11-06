@@ -61,3 +61,12 @@ a:active {
     scroll-behavior: auto !important;
   }
 }
+
+.sectionLabel {
+  margin: 0 0 var(--space-medium);
+  color: var(--accent-lavender);
+  font-size: 0.75rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+}

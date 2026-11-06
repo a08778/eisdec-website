@@ -6,11 +6,13 @@ export type Project = {
   status: string;
   description: string;
   url: string | null;
+  logo?: string;
 };
 
 export const projects: readonly Project[] = [
   {
     id: 'doc4org',
+    logo: '/brand-mark.svg',
     name: 'Doc4Org',
     status: 'Research Project',
     description:

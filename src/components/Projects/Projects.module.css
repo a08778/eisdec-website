@@ -24,7 +24,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-large);
   margin: var(--space-large) 0 0;
   padding: 0;
@@ -32,8 +32,16 @@
 }
 
 .card {
+  position: relative;
+  overflow: hidden;
   min-width: 0;
-  max-width: 34rem;
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  width: 75%;
+  transition:
+    border-color var(--transition-fast) ease,
+    background-color var(--transition-fast) ease;
   padding: var(--space-large);
   border: var(--border-width) solid var(--border-subtle);
   border-radius: var(--radius-medium);
@@ -63,4 +71,61 @@
 .link {
   display: inline-block;
   margin-top: var(--space-large);
+}
+
+.projects {
+  background: radial-gradient(
+    ellipse at 30% 65%,
+    color-mix(in srgb, var(--accent-blue) 8%, transparent),
+    transparent 65%
+  );
+}
+.card:hover {
+  border-color: var(--border-strong);
+  background-color: var(--background-surface);
+}
+.logoPanel {
+  flex: 0 0 7rem;
+  padding: var(--space-small);
+  border-radius: var(--radius-medium);
+  background: var(--text-primary);
+}
+.logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+.content {
+  min-width: 0;
+  max-width: 55ch;
+}
+.link {
+  min-height: 2.75rem;
+  align-content: center;
+}
+@media (max-width: 64rem) {
+  .card {
+    width: 100%;
+  }
+}
+@media (max-width: 40rem) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logoPanel {
+    flex-basis: auto;
+    width: 5rem;
+  }
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: var(--accent-gradient);
+  opacity: 0.65;
+  pointer-events: none;
 }

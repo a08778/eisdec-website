@@ -1,7 +1,10 @@
 .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   width: min(100%, var(--content-width));
   margin-inline: auto;
-  padding: var(--section-space) var(--page-padding);
+  padding: var(--hero-space) var(--page-padding);
 }
 
 .heading {
@@ -25,4 +28,163 @@
   font-size: clamp(var(--font-size-body), 0.9rem + 0.5vw, 1.25rem);
   line-height: var(--line-height-body);
   text-wrap: pretty;
+}
+
+.architecture {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: 0 0 0 38%;
+  perspective: 850px;
+  background:
+    radial-gradient(
+      ellipse at 82% 32%,
+      color-mix(in srgb, var(--accent-peach) 6%, transparent),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 65% 58%,
+      color-mix(in srgb, var(--accent-lavender) 19%, transparent),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse at 45% 75%,
+      color-mix(in srgb, var(--accent-blue) 14%, transparent),
+      transparent 50%
+    );
+  mask-image: linear-gradient(to right, transparent, black 45%);
+}
+
+.panel {
+  position: absolute;
+  top: 12%;
+  right: 10%;
+  width: 40%;
+  height: 65%;
+  border: 1px solid transparent;
+  border-radius: var(--radius-medium);
+  background:
+    linear-gradient(
+        155deg,
+        var(--background-primary),
+        color-mix(in srgb, var(--background-primary) 93%, transparent)
+      )
+      padding-box,
+    linear-gradient(
+        155deg,
+        color-mix(in srgb, var(--accent-blue) 48%, var(--background-primary)),
+        color-mix(
+            in srgb,
+            var(--accent-lavender) 44%,
+            var(--background-primary)
+          )
+          38%,
+        color-mix(in srgb, var(--accent-pink) 35%, var(--background-primary))
+          68%,
+        color-mix(in srgb, var(--accent-peach) 35%, var(--background-primary))
+      )
+      border-box;
+  box-shadow:
+    inset 12px 0 35px color-mix(in srgb, var(--accent-blue) 8%, transparent),
+    10px 14px 35px
+      color-mix(in srgb, var(--background-primary) 65%, transparent);
+  transform: rotateY(-32deg) rotateX(8deg) skewY(-8deg);
+}
+
+.panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      115deg,
+      transparent 25%,
+      color-mix(in srgb, var(--accent-lavender) 20%, transparent) 45%,
+      transparent 65%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 48px,
+      color-mix(in srgb, var(--accent-lavender) 5%, transparent) 48px 49px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 48px,
+      color-mix(in srgb, var(--accent-blue) 4%, transparent) 48px 49px
+    );
+  mask-image: linear-gradient(155deg, black, transparent 85%);
+}
+
+.panel::after {
+  content: '';
+  position: absolute;
+  inset: 8% 10%;
+  border: 1px solid color-mix(in srgb, var(--accent-lavender) 20%, transparent);
+  border-top-color: color-mix(in srgb, var(--accent-peach) 25%, transparent);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-blue) 10%, transparent),
+    transparent 50%,
+    color-mix(in srgb, var(--accent-pink) 7%, transparent)
+  );
+  box-shadow: 6px 6px 0
+    color-mix(in srgb, var(--accent-lavender) 4%, transparent);
+}
+
+.panel:nth-child(2) {
+  top: 23%;
+  right: 25%;
+  height: 61%;
+  opacity: 0.7;
+}
+
+.panel:nth-child(3) {
+  top: 34%;
+  right: 40%;
+  height: 54%;
+  opacity: 0.45;
+}
+
+.platform {
+  position: absolute;
+  right: 5%;
+  bottom: 8%;
+  width: 75%;
+  height: 23%;
+  border: 1px solid color-mix(in srgb, var(--accent-pink) 35%, transparent);
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 40px,
+      color-mix(in srgb, var(--accent-blue) 8%, transparent) 40px 41px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 40px,
+      color-mix(in srgb, var(--accent-lavender) 8%, transparent) 40px 41px
+    ),
+    linear-gradient(
+      115deg,
+      color-mix(in srgb, var(--accent-blue) 14%, transparent),
+      color-mix(in srgb, var(--accent-pink) 9%, transparent),
+      color-mix(in srgb, var(--accent-peach) 8%, transparent)
+    );
+  box-shadow:
+    0 12px 0 -1px var(--background-primary),
+    0 13px 0 color-mix(in srgb, var(--accent-lavender) 22%, transparent);
+  transform: rotateX(65deg) rotateZ(-16deg);
+}
+
+@media (max-width: 64rem) {
+  .architecture {
+    inset-inline-start: 48%;
+    opacity: 0.65;
+  }
+}
+
+@media (max-width: 40rem) {
+  .architecture {
+    inset: 30% -15% 0 35%;
+    opacity: 0.4;
+  }
 }
