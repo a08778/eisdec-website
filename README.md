@@ -4,10 +4,10 @@ Official corporate website of EISDEC, an emerging technology company.
 
 ## Development status
 
-Phase 2.3 adds Projects & Research after Hero, About, and Expertise. Doc4Org is
-presented as a Research Project. The Header remains logo-only with a working
-homepage link. Full navigation, Contact, and Privacy Notice remain deferred.
-The brand foundation, minimal Footer, skip link, and full-height shell remain.
+Phase 2.4 adds Contact, functional single-page Header navigation, and a Footer
+Contact link. The selected corporate email remains disabled and is not displayed
+or linked. Privacy Notice and Phase 3 features remain deferred. Existing approved
+copy, brand assets, design tokens, and tooling are preserved.
 
 ## Technology stack
 
@@ -57,6 +57,7 @@ src/
     About/              Approved purpose statement
     Expertise/          Three proposed focus areas in a fluid grid
     Projects/           Research initiatives rendered from local typed data
+    Contact/            Configuration-gated contact channel
     Footer/             Minimal company name and dynamic year
   config/projects.ts    Project entries and external URL validation
   config/site.ts        Shared site details; unknown destinations remain null
@@ -87,7 +88,7 @@ npm run build
 The build is compatible with Cloudflare Pages static hosting. For a future
 deployment, use the repository root, build command `npm run build`, output
 directory `dist`, and the documented Node.js version. No server runtime, backend,
-or database is required. No deployment or DNS configuration is part of Phase 2.3.
+or database is required. No deployment or DNS configuration is part of Phase 2.4.
 
 ## Project entries
 
@@ -132,3 +133,19 @@ are used. The 192px and 512px icons are retained without adding PWA functionalit
 
 The brand package README requests comparison with the approved raster before final
 production signoff; this phase does not grant or replace that signoff.
+
+## Contact and navigation
+
+`siteConfig.contactEmail` selects the corporate address; `contactEmailEnabled`
+remains `false` until the channel is operational and explicitly approved for use.
+Contact displays provisional copy with no email address, button, or mailto link.
+When the flag is enabled and an address exists, Contact shows the enabled copy and
+an email link; Footer uses the same configuration. Future Privacy Notice content
+must reuse this address rather than introduce a separate privacy email.
+
+Header navigation uses native anchors for About, Expertise, Projects, and Contact.
+The non-sticky Header wraps naturally on narrow screens, with 44px-high link targets.
+Section scroll margins account for the Header height token. Scrolling is native
+and immediate for all motion preferences; no smooth scrolling or scrolling script
+is introduced. Footer contains only working links; its link group can accommodate
+Privacy Notice when that destination is implemented.

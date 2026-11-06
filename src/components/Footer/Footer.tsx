@@ -8,6 +8,15 @@ export default function Footer() {
         <p>
           © {new Date().getFullYear()} {siteConfig.name}
         </p>
+        {/* Additional footer links, including Privacy Notice, belong here once implemented. */}
+        <div className={styles.links}>
+          {siteConfig.contactEmailEnabled && siteConfig.contactEmail && (
+            <a href={`mailto:${siteConfig.contactEmail}`}>
+              {siteConfig.contactEmail}
+            </a>
+          )}
+          <a href="#contact">Contact</a>
+        </div>
       </div>
     </footer>
   );

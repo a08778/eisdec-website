@@ -5,9 +5,26 @@
 }
 
 .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-medium) var(--space-large);
   width: min(100%, var(--content-width));
   margin-inline: auto;
   padding: var(--space-large) var(--page-padding);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-medium) var(--space-large);
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
 }
 
 .inner p {

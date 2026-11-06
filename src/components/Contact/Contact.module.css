@@ -1,0 +1,30 @@
+.contact {
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+  padding: var(--section-space) var(--page-padding);
+  border-top: var(--border-width) solid var(--border-subtle);
+}
+
+.heading {
+  margin: 0;
+  font-size: var(--font-size-heading);
+  font-weight: var(--weight-medium);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--tracking-heading);
+  text-wrap: balance;
+}
+
+.description {
+  max-width: 60ch;
+  margin: var(--space-large) 0 0;
+  color: var(--text-secondary);
+  line-height: var(--line-height-body);
+  text-wrap: pretty;
+}
+
+.email {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-top: var(--space-medium);
+}

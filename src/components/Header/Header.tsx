@@ -13,6 +13,22 @@ export default function Header() {
         >
           <img className={styles.logo} src={logo} alt={siteConfig.name} />
         </a>
+        <nav aria-label="Main navigation" className={styles.navigation}>
+          <ul className={styles.links}>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#expertise">Expertise</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );

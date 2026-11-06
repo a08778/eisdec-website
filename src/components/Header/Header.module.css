@@ -6,6 +6,9 @@
 .inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-medium) var(--space-large);
   min-height: var(--header-height);
   width: min(100%, var(--content-width));
   margin-inline: auto;
@@ -16,7 +19,44 @@
   display: block;
   width: var(--logo-width);
   max-width: 100%;
+  flex-shrink: 0;
+  min-height: 2.75rem;
+  align-content: center;
   border-radius: var(--radius-small);
+}
+
+.navigation {
+  max-width: 100%;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-medium);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--text-secondary);
+  font-size: var(--font-size-small);
+  text-decoration: none;
+  border-radius: var(--radius-small);
+}
+
+.links a:hover,
+.links a:focus-visible {
+  color: var(--interactive-hover);
+  text-decoration: underline;
+}
+
+.links a:active {
+  color: var(--interactive-active);
+  text-decoration: underline;
 }
 
 .logo {
