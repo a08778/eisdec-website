@@ -4,10 +4,10 @@ Official corporate website of EISDEC, an emerging technology company.
 
 ## Development status
 
-Phase 2.2 adds About and Expertise below the approved Hero. The Header remains
-logo-only with a working homepage link. Full navigation, Projects, Contact, and
-Privacy Notice remain deferred. The brand foundation, minimal Footer, skip link,
-and full-height shell remain unchanged.
+Phase 2.3 adds Projects & Research after Hero, About, and Expertise. Doc4Org is
+presented as a Research Project. The Header remains logo-only with a working
+homepage link. Full navigation, Contact, and Privacy Notice remain deferred.
+The brand foundation, minimal Footer, skip link, and full-height shell remain.
 
 ## Technology stack
 
@@ -56,7 +56,9 @@ src/
     Hero/               Approved heading and description with fluid typography
     About/              Approved purpose statement
     Expertise/          Three proposed focus areas in a fluid grid
+    Projects/           Research initiatives rendered from local typed data
     Footer/             Minimal company name and dynamic year
+  config/projects.ts    Project entries and external URL validation
   config/site.ts        Shared site details; unknown destinations remain null
   styles/tokens.css     Semantic and provisional UI tokens
   styles/global.css     Global base, focus, and reduced-motion rules
@@ -85,7 +87,20 @@ npm run build
 The build is compatible with Cloudflare Pages static hosting. For a future
 deployment, use the repository root, build command `npm run build`, output
 directory `dist`, and the documented Node.js version. No server runtime, backend,
-or database is required. No deployment or DNS configuration is part of Phase 2.2.
+or database is required. No deployment or DNS configuration is part of Phase 2.3.
+
+## Project entries
+
+`src/config/projects.ts` contains the typed project collection. Add future entries
+with unique stable IDs. Doc4Org's URL comes only from `siteConfig.doc4orgUrl`, which
+remains `null` pending confirmation. Null or invalid URLs produce no link or button;
+cards are never clickable containers. Valid absolute HTTPS URLs without embedded
+credentials produce a named external link with a visible new-tab notice and
+`rel="noopener noreferrer"`. URL validation checks syntax and scheme, not site
+availability or approval. No external requests are made to validate destinations.
+
+The grid reserves space for future entries and caps each card at 34rem, so the
+single research initiative does not stretch across the full desktop content width.
 
 ## Brand integration
 

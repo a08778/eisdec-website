@@ -3,6 +3,7 @@ import Footer from '../components/Footer/Footer';
 import Hero from '../components/Hero/Hero';
 import About from '../components/About/About';
 import Expertise from '../components/Expertise/Expertise';
+import Projects from '../components/Projects/Projects';
 import styles from './App.module.css';
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <Hero />
         <About />
         <Expertise />
+        <Projects />
       </main>
       <Footer />
     </div>
