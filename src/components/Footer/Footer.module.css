@@ -1,0 +1,15 @@
+.footer {
+  border-top: var(--border-width) solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: var(--font-size-small);
+}
+
+.inner {
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+  padding: var(--space-large) var(--page-padding);
+}
+
+.inner p {
+  margin: 0;
+}

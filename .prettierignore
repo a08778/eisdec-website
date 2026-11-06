@@ -1,3 +1,6 @@
 node_modules/
 dist/
 package-lock.json
+eisdec-brand-v4/
+src/assets/brand/
+public/*.svg

@@ -1,0 +1,21 @@
+.header {
+  background: var(--background-primary);
+  border-bottom: var(--border-width) solid var(--border-subtle);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  min-height: var(--header-height);
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+  padding: var(--space-medium) var(--page-padding);
+}
+
+.logo {
+  display: block;
+  width: var(--logo-width);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1400 / 260;
+}

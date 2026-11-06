@@ -1,0 +1,24 @@
+{
+  "background": "#070D22",
+  "gradient": {
+    "direction": "horizontal",
+    "stops": [
+      {
+        "position": 0,
+        "color": "#80B5EB"
+      },
+      {
+        "position": 0.34,
+        "color": "#B1B5E8"
+      },
+      {
+        "position": 0.61,
+        "color": "#D9B2CD"
+      },
+      {
+        "position": 1,
+        "color": "#F5B18D"
+      }
+    ]
+  }
+}

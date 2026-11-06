@@ -1,0 +1,1 @@
+EISDEC Brand v4.0 — manually reconstructed geometric logo based on approved visual reference. One continuous gradient across the wordmark. Glyph contours are editable SVG paths; favicon uses the same E contour. Compare preview against approved raster before final production signoff.
