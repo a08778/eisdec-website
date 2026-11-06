@@ -12,10 +12,16 @@
   padding: var(--space-medium) var(--page-padding);
 }
 
-.logo {
+.homeLink {
   display: block;
   width: var(--logo-width);
   max-width: 100%;
+  border-radius: var(--radius-small);
+}
+
+.logo {
+  display: block;
+  width: 100%;
   height: auto;
   aspect-ratio: 1400 / 260;
 }

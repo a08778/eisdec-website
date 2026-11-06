@@ -1,6 +1,6 @@
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
-import { siteConfig } from '../config/site';
+import Hero from '../components/Hero/Hero';
 import styles from './App.module.css';
 
 export default function App() {
@@ -11,9 +11,7 @@ export default function App() {
       </a>
       <Header />
       <main id="main-content" className={styles.main} tabIndex={-1}>
-        <h1 className={styles.heading}>
-          {siteConfig.name} — Website under development
-        </h1>
+        <Hero />
       </main>
       <Footer />
     </div>

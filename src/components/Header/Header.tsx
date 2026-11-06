@@ -6,7 +6,13 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <img className={styles.logo} src={logo} alt={siteConfig.name} />
+        <a
+          className={styles.homeLink}
+          href="/"
+          aria-label={`${siteConfig.name} home`}
+        >
+          <img className={styles.logo} src={logo} alt={siteConfig.name} />
+        </a>
       </div>
     </header>
   );

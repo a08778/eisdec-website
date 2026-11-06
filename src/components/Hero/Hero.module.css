@@ -1,0 +1,28 @@
+.hero {
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+  padding: var(--section-space) var(--page-padding);
+}
+
+.heading {
+  max-width: 17ch;
+  margin: 0;
+  font-size: clamp(2.5rem, 1.5rem + 4vw, 5.5rem);
+  font-weight: var(--weight-medium);
+  line-height: 1.1;
+  letter-spacing: var(--tracking-heading);
+  text-wrap: balance;
+}
+
+.accent {
+  color: var(--accent-blue);
+}
+
+.description {
+  max-width: 58ch;
+  margin: var(--space-large) 0 0;
+  color: var(--text-secondary);
+  font-size: clamp(var(--font-size-body), 0.9rem + 0.5vw, 1.25rem);
+  line-height: var(--line-height-body);
+  text-wrap: pretty;
+}
